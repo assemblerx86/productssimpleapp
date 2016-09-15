@@ -1,0 +1,23 @@
+
+POST /items
+GET /items/EE-SJ5-B
+PUT /items/EE-SJ5-B
+DELETE /items/EE-SJ5-B
+
+
+
+// dodatkowo otocz try&catch
+
+db.getCollection("items").insertOne(
+	new Document()
+		.append("name", "2 Avenue")
+		.append("category", "10075")
+		.append("description", "1480")
+	)
+);
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+

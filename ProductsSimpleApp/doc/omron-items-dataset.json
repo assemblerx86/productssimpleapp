@@ -1,0 +1,30 @@
+{
+"name" : "2SMPP-02",
+"category" : "PRODUCTS > MEMS SENSORS > PRESSURE SENSORS",
+"description" : "Miniature pressure sensor based on MEMS and CMOS technology with low temperature influence, small offset and span voltage variation, low power consumption."
+}
+{
+"name" : "D3DC",
+"category" : "PRODUCTS > SWITCHES > DOORSWITCHES",
+"description" : "<ul><li>Miniature door switch</li><li>Easy stroke setting by operating point marking and long stroke</li><li>Long stroke (7mm) in small package</li><li>Quick Connect terminals for easy wiring </li></ul>"
+}
+{
+"name" : "G3VM series",
+"category" : "PRODUCTS > RELAYS > MOSFET RELAYS",
+"description" : "<ul><li>4-6-8 pins</li><li>General Purpose, Ultra-Sensitive, Ultra Small</li><li>Current Limiting, Hugh Current & Low ON-Resistance, High Voltage & High Dielectric Strength</li></ul>"
+}
+{
+"name" : "XP3B",
+"category" : "PRODUCTS > CONNECTORS > PROBE PINS",
+"description" : "Highly reliable electroformed probe pins - Outer spring type<ul><li>Plunger structure provides stable contact.</li><li>Smooth end surfaces achieved using electroforming results in high durability.</li><li>Heterogeneous plating prevents metal welding at high temperatures.</li></ul>"
+}
+{
+"name" : "D6F-WXXA1",
+"category" : "PRODUCTS > MEMS SENSORS > VELOCITY FLOW SENSORS",
+"description" : "Velocity flow sensor models incorporate unique Dust Segregation System that helps maintain sensing performance in variety of applications, mainly in building automation area."
+}
+{
+"name" : "EE-SJ5-B",
+"category" : "PRODUCTS > MICRO SENSING DEVICES > TRANSMISSIVE WITH PHOTOTRANSISTOR OUTPUT",
+"description" : "One of the largest ranges of transmissive photomicrosensors available, encompassing SMD, through hole PCM, snap-in, solder tab and screw mounted solutions in various package sizes. Sensors are applicable in office automation, medical devices, building automation, amusement industry or vending machines."
+}
