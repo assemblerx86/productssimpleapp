@@ -29,12 +29,10 @@ public class HelloController {
     private MongoClient mongoClient;
     private MongoDatabase db;
     
-    
+
     public HelloController() {
         mongoClient = new MongoClient();
-        db = mongoClient.getDatabase("test");
-		
-		
+        db = mongoClient.getDatabase("test");	
     }
     
     @RequestMapping("/")
@@ -58,6 +56,7 @@ public class HelloController {
 				limitCounter++;
 			}
 		});
+		return outSet;
     }
     
     @RequestMapping("/add")
