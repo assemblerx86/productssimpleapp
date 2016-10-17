@@ -1,4 +1,5 @@
 
+// Define the `phoneDetail` module
 angular.module('phoneDetail', [
-  'ngRoute'
+  'ngRoute', 'core.phone'
 ]);
