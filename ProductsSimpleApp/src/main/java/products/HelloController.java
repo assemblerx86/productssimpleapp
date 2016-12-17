@@ -54,7 +54,7 @@ public class HelloController {
 		iterable.forEach(new Block<Document>() {
 			@Override
 			public void apply(final Document document) {
-				outSet += document.toJson();
+				outSet = document.toJson(); // +=
 			}
 		});
 		return outSet;
