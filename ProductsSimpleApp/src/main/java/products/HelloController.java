@@ -2,6 +2,8 @@ package main.java.products;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
@@ -23,7 +25,6 @@ import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 @RestController
 public class HelloController {
     private MongoClient mongoClient;
@@ -36,29 +37,42 @@ public class HelloController {
     }
     
     @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
+    public String index(HttpServletResponse response) {
+		//Access-Control-Allow-Credentials
+        return "Spring Boot app";
     }
-    
+
 	private String outSet = "";
 	private int limitCounter = 0;
 	
-    @RequestMapping("/all")
-    public String all() {
+    @RequestMapping("/phones/all")
+    public String all(HttpServletResponse response) {
+		setJSONHeaders(response);
 
-		FindIterable<Document> iterable = db.getCollection("restaurants").find();
+		FindIterable<Document> iterable = db.getCollection("phones").find();
+		outSet = "";
 		iterable.forEach(new Block<Document>() {
 			@Override
 			public void apply(final Document document) {
-				if (limitCounter < 50) {
-					outSet += document.toString();
-				}
-				limitCounter++;
+				outSet += document.toJson();
 			}
 		});
 		return outSet;
     }
-    
+
+
+	public void setVaryResponseHeader(HttpServletResponse response) {
+		response.setHeader("Vary", "Accept");
+	}
+
+
+	@RequestMapping("/phones/{phoneId}")
+	public String getCarById(@PathVariable("phoneId") String Id, HttpServletResponse response) {
+		setJSONHeaders(response);
+
+        return "Spring Boot app";
+	}
+
     @RequestMapping("/add")
 	public String add() {
 		try {
@@ -96,4 +110,8 @@ public class HelloController {
 		}
 		return "Document added";
     }
+
+	private void setJSONHeaders(HttpServletResponse response) {
+		response.setHeader("Access-Control-Allow-Credentials", "true");
+	}
 }
