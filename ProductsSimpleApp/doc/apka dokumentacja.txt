@@ -1,9 +1,4 @@
 
-POST /items
-GET /items/EE-SJ5-B
-PUT /items/EE-SJ5-B
-DELETE /items/EE-SJ5-B
-
 
 
 // dodatkowo otocz try&catch
@@ -15,11 +10,4 @@ db.getCollection("items").insertOne(
 		.append("description", "1480")
 	)
 );
-
-
-TODO:
-
-
--------------------------------------------------------------------------------------------------------------------------------
-
 

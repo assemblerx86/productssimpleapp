@@ -7,6 +7,7 @@
     controller: ['Phone',
       function PhoneListController(Phone) {
         this.phones = Phone.query();
+console.log(this.phones);
         this.orderProp = 'age';
       }
     ]

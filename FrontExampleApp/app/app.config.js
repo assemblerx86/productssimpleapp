@@ -10,7 +10,6 @@ angular.
         }).
         when('/phones/:phoneId', {
           template: '<phone-detail></phone-detail>'
-        }).
-        otherwise('/phones');
+        }).otherwise('/phones');
     }
   ]);

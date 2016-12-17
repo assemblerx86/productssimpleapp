@@ -3,28 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/index.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phones/phones.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-detail/phone-detail.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-detail/phone-detail.component.spec.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/angular/version.txt</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/app.css</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-list/phone-list.template.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phones/motorola-xoom-with-wi-fi.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/core/phone/phone.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/core/checkmark/checkmark.filter.spec.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/app.config.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/core/checkmark/checkmark.filter.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/core/phone/phone.service.spec.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-list/phone-list.component.spec.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/app.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-list/phone-list.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/core/phone/phone.service.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/e2e-tests/scenarios.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-detail/phone-detail.component.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-list/phone-list.component.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/phone-detail/phone-detail.template.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/public_html/app/core/core.module.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/app.module.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/index.html</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/core.module.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/phone/phone.module.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-list/phone-list.module.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-list/phone-list.component.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-detail/phone-detail.template.html</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/phone/phone.service.spec.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/app.config.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/phone/phone.service.js</file>
+            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-list/phone-list.template.html</file>
         </group>
     </open-files>
 </project-private>
