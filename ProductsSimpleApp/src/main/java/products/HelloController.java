@@ -50,13 +50,16 @@ public class HelloController {
 		setJSONHeaders(response);
 
 		FindIterable<Document> iterable = db.getCollection("phones").find();
-		outSet = "";
+		outSet = "[";
 		iterable.forEach(new Block<Document>() {
 			@Override
 			public void apply(final Document document) {
-				outSet = document.toJson(); // +=
+				outSet += document.toJson();
+				outSet += ",";
 			}
 		});
+		outSet = outSet.replaceFirst("(.*),$", "$1");
+		outSet += "]";
 		return outSet;
     }
 
@@ -113,5 +116,6 @@ public class HelloController {
 
 	private void setJSONHeaders(HttpServletResponse response) {
 		response.setHeader("Access-Control-Allow-Credentials", "true");
+		response.setHeader("Access-Control-Allow-Origin", "http://localhost:8383");
 	}
 }
