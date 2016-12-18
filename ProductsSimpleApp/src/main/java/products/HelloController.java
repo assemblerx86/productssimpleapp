@@ -33,12 +33,11 @@ public class HelloController {
 
     public HelloController() {
         mongoClient = new MongoClient();
-        db = mongoClient.getDatabase("test");	
+        db = mongoClient.getDatabase("phones");	
     }
     
     @RequestMapping("/")
     public String index(HttpServletResponse response) {
-		//Access-Control-Allow-Credentials
         return "Spring Boot app";
     }
 
@@ -49,7 +48,7 @@ public class HelloController {
     public String all(HttpServletResponse response) {
 		setJSONHeaders(response);
 
-		FindIterable<Document> iterable = db.getCollection("phones").find();
+		FindIterable<Document> iterable = db.getCollection("list").find();
 		outSet = "[";
 		iterable.forEach(new Block<Document>() {
 			@Override
@@ -63,56 +62,22 @@ public class HelloController {
 		return outSet;
     }
 
-
-	public void setVaryResponseHeader(HttpServletResponse response) {
-		response.setHeader("Vary", "Accept");
-	}
-
-
 	@RequestMapping("/phones/{phoneId}")
-	public String getCarById(@PathVariable("phoneId") String Id, HttpServletResponse response) {
+	public String getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
 		setJSONHeaders(response);
 
-        return "Spring Boot app";
+		FindIterable<Document> iterable = db.getCollection("items").find(
+			new Document("id", phoneId)
+		);
+		outSet = "";
+		iterable.forEach(new Block<Document>() {
+			@Override
+			public void apply(final Document document) {
+				outSet += document.toJson();
+			}
+		});
+		return outSet;
 	}
-
-    @RequestMapping("/add")
-	public String add() {
-		try {
-			//if (2+2==4) {
-			//	return "hmm";
-			//}
-			DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH);
-			db.getCollection("restaurants").insertOne(
-				new Document("address",
-					new Document()
-					.append("street", "2 Avenue")
-					.append("zipcode", "10075")
-					.append("building", "1480")
-					.append("coord", asList(-73.9557413, 40.7720266))
-				)
-				.append("borough", "Manhattan")
-				.append("cuisine", "Polska")
-				.append("grades",
-					asList(
-						new Document()
-						.append("date", format.parse("2014-10-01T00:00:00Z"))
-						.append("grade", "A")
-						.append("score", 11),
-						new Document()
-						.append("date", format.parse("2014-01-16T00:00:00Z"))
-						.append("grade", "B")
-						.append("score", 17)
-					)
-				)
-				.append("name", "Vella")
-				.append("restaurant_id", "41704620")
-			);
-		} catch (ParseException ex) {
-			Logger.getLogger(HelloController.class.getName()).log(Level.SEVERE, null, ex);
-		}
-		return "Document added";
-    }
 
 	private void setJSONHeaders(HttpServletResponse response) {
 		response.setHeader("Access-Control-Allow-Credentials", "true");
