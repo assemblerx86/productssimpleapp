@@ -1,3 +1,44 @@
+https://docs.google.com/document/d/1BZsU7_QAETRgk9k7WucoATJEtljyNPRPr1ertldc1Og/edit#
+https://spring.io/guides/tutorials/bookmarks/
+http://localhost:8080/phones/all
+http://localhost:8383/ProductsSimpleAppFront/index.html#!/phones
+
+https://spring.io/guides/gs/accessing-data-mongodb/
+https://spring.io/guides/gs/accessing-mongodb-data-rest/
+
+http://localhost:8080/people/
+http://localhost:8080/phones
+http://localhost:8080/phones/search/findByName?name=Nexus%20S
+
+
+
+
+c:\assembler\projects\ProductsSimpleApp>curl -i -X POST -H "Content-Type:application/json" -d "{  \"firstName\" : \"Frodo\",  \"lastName\" : \"Baggins\" }" http://localhost:8080/people
+HTTP/1.1 201 Created
+Date: Sat, 28 Jan 2017 15:43:19 GMT
+X-Application-Context: application
+Location: http://localhost:8080/people/588cbc17ce5bfe12ccd166fd
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+
+{
+  "firstName" : "Frodo",
+  "lastName" : "Baggins",
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/people/588cbc17ce5bfe12ccd166fd"
+    },
+    "person" : {
+      "href" : "http://localhost:8080/people/588cbc17ce5bfe12ccd166fd"
+    }
+  }
+}
+c:\assembler\projects\ProductsSimpleApp>
+
+
+
+
+
 Interfejs REST
 Produkty
 Standardowo dodanie nowego przedmiotu na POST, pobranie na GET, aktualizacja na PUT i usuniêcie na DELETE

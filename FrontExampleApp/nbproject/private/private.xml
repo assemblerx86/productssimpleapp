@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/app.module.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/index.html</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/core.module.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/phone/phone.module.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-list/phone-list.module.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-list/phone-list.component.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-detail/phone-detail.template.html</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/phone/phone.service.spec.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/app.config.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/core/phone/phone.service.js</file>
-            <file>file:/C:/assembler/projects/FrontExampleApp/app/phone-list/phone-list.template.html</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

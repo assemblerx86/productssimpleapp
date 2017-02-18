@@ -3,29 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/components/version/version-directive.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phones/phones.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/index-async.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/core/core.module.js</file>
             <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/index.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phone-detail/phone-detail.component.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phone-list/phone-list.component.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phone-list/phone-list.module.js</file>
             <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/core/phone/phone.service.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/bower.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/components/version/version.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/package.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phone-detail/phone-detail.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/core/phone/phone.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/components/version/interpolate-filter.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/app.module.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/view1/view1.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phone-list/phone-list.template.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/.bowerrc</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/app.css</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/phone-detail/phone-detail.template.html</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/app.config.js</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleAppFront/app/components/version/version-directive_test.js</file>
         </group>
     </open-files>
 </project-private>

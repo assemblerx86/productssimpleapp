@@ -1,7 +1,8 @@
-package main.java.products;
+package main.java.phones;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -26,12 +27,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-public class HelloController {
+@RequestMapping("/phones/") //{phoneId}
+public class PhonesController {
     private MongoClient mongoClient;
     private MongoDatabase db;
     
 
-    public HelloController() {
+    public PhonesController() {
         mongoClient = new MongoClient();
         db = mongoClient.getDatabase("phones");	
     }
@@ -41,42 +43,48 @@ public class HelloController {
         return "Spring Boot app";
     }
 
-	private String outSet = "";
-	private int limitCounter = 0;
-	
-    @RequestMapping("/phones/all")
+// TODO tu powinno być
+//+    @RequestMapping("/")^M
+//+    public List<PhoneList> String all(HttpServletResponse response) {
+
+    @RequestMapping("/all")
     public String all(HttpServletResponse response) {
 		setJSONHeaders(response);
 
+		StringBuffer outSet = new StringBuffer();
+		
 		FindIterable<Document> iterable = db.getCollection("list").find();
-		outSet = "[";
+		outSet.append("[");
 		iterable.forEach(new Block<Document>() {
 			@Override
 			public void apply(final Document document) {
-				outSet += document.toJson();
-				outSet += ",";
+				outSet.append(document.toJson());
+				outSet.append(",");
 			}
 		});
-		outSet = outSet.replaceFirst("(.*),$", "$1");
-		outSet += "]";
-		return outSet;
+		String out = outSet.toString().replaceFirst("(.*),$", "$1");
+		out += "]";
+		return out;
     }
 
-	@RequestMapping("/phones/{phoneId}")
+	// TODO: zwracać PhoneDetails obiekt a nie String
+	@RequestMapping("/{phoneId}")
+	@ResponseBody
 	public String getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
 		setJSONHeaders(response);
 
 		FindIterable<Document> iterable = db.getCollection("items").find(
 			new Document("id", phoneId)
 		);
-		outSet = "";
+
+		StringBuffer outSet = new StringBuffer();
 		iterable.forEach(new Block<Document>() {
 			@Override
 			public void apply(final Document document) {
-				outSet += document.toJson();
+				outSet.append(document.toJson());
 			}
 		});
-		return outSet;
+		return outSet.toString();
 	}
 
 	private void setJSONHeaders(HttpServletResponse response) {
