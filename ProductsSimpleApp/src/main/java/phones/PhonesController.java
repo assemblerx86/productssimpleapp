@@ -38,10 +38,10 @@ public class PhonesController {
         db = mongoClient.getDatabase("phones");	
     }
     
-    @RequestMapping("/")
+/*    @RequestMapping("/")
     public String index(HttpServletResponse response) {
         return "Spring Boot app";
-    }
+    }*/
 
 // TODO tu powinno być
 //+    @RequestMapping("/")^M
