@@ -54,7 +54,7 @@ public class PhonesController {
 		StringBuffer outSet = new StringBuffer();
 		
 		FindIterable<Document> iterable = db.getCollection("list").find();
-		outSet.append("[");
+		outSet.append("{ \"_embedded\" : [");
 		iterable.forEach(new Block<Document>() {
 			@Override
 			public void apply(final Document document) {
@@ -63,12 +63,14 @@ public class PhonesController {
 			}
 		});
 		String out = outSet.toString().replaceFirst("(.*),$", "$1");
-		out += "]";
+		out += "] }";
+
+		//out = "{\"_embedded\" : { \"phones\" : [ { \"name\" : \"Nexus S\", \"snippet\" : \"Fast just got faster with Nexus S.\", \"imageUrl\" : \"img/phones/nexus-s.0.jpg\", \"_links\" : { \"self\" : { \"href\" : \"http://localhost:8080/phones/nexus-s\" }, \"phoneDetails\" : {\"href\" : \"http://localhost:8080/phones/nexus-s\" } } } ] }, \"_links\" : { \"self\" : { \"href\" : \"http://localhost:8080/phones/search/findByName?name=Nexus%20S\" } } }";
 		return out;
     }
 
 	// TODO: zwracać PhoneDetails obiekt a nie String
-	@RequestMapping("/{phoneId}")
+/*	@RequestMapping("/{phoneId}")
 	@ResponseBody
 	public String getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
 		setJSONHeaders(response);
@@ -85,10 +87,11 @@ public class PhonesController {
 			}
 		});
 		return outSet.toString();
-	}
+	}*/
 
 	private void setJSONHeaders(HttpServletResponse response) {
 		response.setHeader("Access-Control-Allow-Credentials", "true");
 		response.setHeader("Access-Control-Allow-Origin", "http://localhost:8383");
+		response.setHeader("Content-Type", "application/hal+json;charset=UTF-8");
 	}
 }
