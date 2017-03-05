@@ -2,6 +2,7 @@ package main.java.phones;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,7 +48,8 @@ public class PhonesController {
 //+    @RequestMapping("/")^M
 //+    public List<PhoneList> String all(HttpServletResponse response) {
 
-    @RequestMapping("/all")
+    @CrossOrigin(origins = "http://localhost:8383")
+	@RequestMapping("/all")
     public String all(HttpServletResponse response) {
 		setJSONHeaders(response);
 
@@ -91,7 +93,7 @@ public class PhonesController {
 
 	private void setJSONHeaders(HttpServletResponse response) {
 		response.setHeader("Access-Control-Allow-Credentials", "true");
-		response.setHeader("Access-Control-Allow-Origin", "http://localhost:8383");
+		//response.setHeader("Access-Control-Allow-Origin", "http://localhost:8383");
 		response.setHeader("Content-Type", "application/hal+json;charset=UTF-8");
 	}
 }
