@@ -39,7 +39,7 @@ dependencies {
 
     // Accessing Data with MongoDB
     // @see https://spring.io/guides/gs/accessing-mongodb-data-rest/
-    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    //compile 'org.springframework.boot:spring-boot-starter-data-rest'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
 
     // Spring data MongoDB 

@@ -1,4 +1,4 @@
-package main.java.phones;
+package phones;
 
 import org.springframework.data.annotation.Id;
 
