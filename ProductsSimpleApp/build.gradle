@@ -3,12 +3,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE")
+        // @see https://spring.io/guides/gs/spring-boot/
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.4.RELEASE")
     }
 }
 
 apply plugin: 'java'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 
 jar {
     baseName = 'products-simple-app'
@@ -27,15 +28,28 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
     }
-    compile("org.springframework.boot:spring-boot-starter-jetty")
+    compile 'org.springframework.boot:spring-boot-starter-jetty'
 
     // actuator
-    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
 
     // MongoDB
-    compile ("org.mongodb:mongo-java-driver:3.3.0")
-}
+    compile 'org.mongodb:mongo-java-driver:3.3.0'
 
+
+    // Accessing Data with MongoDB
+    // @see https://spring.io/guides/gs/accessing-mongodb-data-rest/
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    // Spring data MongoDB 
+    // @see http://projects.spring.io/spring-data-mongodb/
+    //compile 'org.springframework.data:spring-data-mongodb:1.10.0.RELEASE'
+
+    // Spring HATEOAS
+    // @see http://projects.spring.io/spring-hateoas/
+    //compile 'org.springframework.hateoas:spring-hateoas:0.23.0.RELEASE'
+}
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
