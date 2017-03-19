@@ -1,15 +1,20 @@
-https://docs.google.com/document/d/1BZsU7_QAETRgk9k7WucoATJEtljyNPRPr1ertldc1Og/edit#
-https://spring.io/guides/tutorials/bookmarks/
-http://localhost:8080/phones/all
-http://localhost:8383/ProductsSimpleAppFront/index.html#!/phones
 
+https://docs.google.com/document/d/1BZsU7_QAETRgk9k7WucoATJEtljyNPRPr1ertldc1Og/edit#
+
+Tutoriale:
+https://spring.io/guides/tutorials/bookmarks/
 https://spring.io/guides/gs/accessing-data-mongodb/
 https://spring.io/guides/gs/accessing-mongodb-data-rest/
 
-http://localhost:8080/people/
-http://localhost:8080/phones
+Backend:
+http://localhost:8080/phones/
+http://localhost:8080/phones/nexus-s
 http://localhost:8080/phones/search/findByName?name=Nexus%20S
+http://localhost:8080/people/
+http://localhost:8080/phones/all
 
+Front:
+http://localhost:8383/ProductsSimpleAppFront/index.html#!/phones
 
 
 
