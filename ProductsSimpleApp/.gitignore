@@ -1,9 +1,0 @@
-bin/
-# Gradle files
-build/
-.gradle/
-# Netbeans files
-.nb-gradle/
-# Eclipse files
-.settings/
-.project

@@ -1,1 +1,10 @@
-/ProductsSimpleApp/.nb-gradle/
+bin/
+# Gradle files
+build/
+.gradle/
+# Netbeans files
+nbproject/
+.nb-gradle/
+# Eclipse files
+.settings/
+.project
