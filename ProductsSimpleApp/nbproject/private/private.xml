@@ -3,21 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PersonRepository.java</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/doc/install/phones-list.curl.txt</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/doc/install/phones-items.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/RestConfiguration.java</file>
             <file>file:/C:/assembler/projects/ProductsSimpleApp/build.gradle</file>
             <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/Person.java</file>
             <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PhoneDetails.java</file>
             <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/Application.java</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PhonesController.java</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/doc/omron-items-dataset.json</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/build.xml</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PhoneApplicationService.java</file>
+            <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PersonRepository.java</file>
             <file>file:/C:/assembler/projects/ProductsSimpleApp/src/test/java/phones/PhoneApplicationServiceTest.java</file>
+            <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PhoneApplicationService.java</file>
             <file>file:/C:/assembler/projects/ProductsSimpleApp/src/main/java/phones/PhoneRepository.java</file>
-            <file>file:/C:/assembler/projects/ProductsSimpleApp/doc/install/phones-list.json</file>
         </group>
     </open-files>
 </project-private>
