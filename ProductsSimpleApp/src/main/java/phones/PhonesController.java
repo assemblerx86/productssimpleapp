@@ -31,7 +31,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-@RequestMapping("/phones") //{phoneId}
+@RequestMapping("/phones")
 public class PhonesController {
 	private PhoneRepository phoneRepository;
 	
@@ -44,5 +44,10 @@ public class PhonesController {
 	public @ResponseBody List<PhoneDetails> list() {
 		return phoneRepository.findAll();
 	}
+
+	@RequestMapping("/{phoneId}")
+	@ResponseBody
+	public PhoneDetails getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
+		return phoneRepository.findByName(phoneId).get(0);
+	}
 }
-// 
