@@ -6,13 +6,10 @@
     templateUrl: 'phone-list/phone-list.template.html',
     controller: ['Phone',
       function PhoneListController(Phone) {
-var that = this;
-         Phone.query().$promise.then(function(phones) {
-that.phones = phones;
+        var that = this;
+        Phone.query().$promise.then(function(phones) {
+            that.phones = phones;
         });
-
-//          this.phones = r._embedded;
-//console.log(this.phones);
         this.orderProp = 'age';
       }
     ]

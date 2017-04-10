@@ -48,6 +48,6 @@ public class PhonesController {
 	@RequestMapping("/{phoneId}")
 	@ResponseBody
 	public PhoneDetails getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
-		return phoneRepository.findByName(phoneId).get(0);
+		return phoneRepository.findById(phoneId);
 	}
 }

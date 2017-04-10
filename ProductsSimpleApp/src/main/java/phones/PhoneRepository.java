@@ -9,9 +9,8 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
-//import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-//@RepositoryRestResource(collectionResourceRel = "phones", path = "phones")
 public interface PhoneRepository extends MongoRepository<PhoneDetails, String> {
 	List<PhoneDetails> findByName(@Param("name") String name);
+	PhoneDetails findById(@Param("id") String id);
 }
