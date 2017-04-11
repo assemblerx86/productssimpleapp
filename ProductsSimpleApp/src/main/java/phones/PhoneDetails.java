@@ -10,6 +10,12 @@ public class PhoneDetails {
 	private String snippet;
 	private String imageUrl;
 	
+	public PhoneDetails(String id, String name, String snippet) {
+		this.id = id;
+		this.name = name;
+		this.snippet = snippet;
+	}
+
 	public String getId() {
 		return id;
 	}

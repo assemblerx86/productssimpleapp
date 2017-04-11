@@ -31,18 +31,31 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-@RequestMapping("/phones") //{phoneId}
+@RequestMapping("/phones")
 public class PhonesController {
 	private PhoneRepository phoneRepository;
+	private PhoneApplicationService phoneApplicationService;
 	
 	@Autowired
-    public PhonesController(PhoneRepository phoneRepository) {
+    public PhonesController(PhoneRepository phoneRepository, PhoneApplicationService phoneApplicationService) {
 		this.phoneRepository = phoneRepository;
+		this.phoneApplicationService = phoneApplicationService;
     }
 
 	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody List<PhoneDetails> list() {
 		return phoneRepository.findAll();
 	}
+
+	@RequestMapping("/{phoneId}")
+	@ResponseBody
+	public PhoneDetails getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
+		return phoneRepository.findById(phoneId);
+	}
+
+	@RequestMapping("/create")
+	@ResponseBody
+	public PhoneDetails createPhone(CreatePhoneCommand createPhoneCommand) {
+		return phoneApplicationService.createPhone(createPhoneCommand);
+	}
 }
-// 

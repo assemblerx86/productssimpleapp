@@ -14,5 +14,4 @@ public class Application {
 
         System.out.println("ProductsSimpleApp run successfully"); // używaj loggerów Logback
     }
-// 
 }

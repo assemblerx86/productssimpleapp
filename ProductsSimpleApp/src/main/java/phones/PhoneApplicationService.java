@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package phones;
 
-//import org.springframework.web.bind.annotation.Service;
+import java.util.UUID;
+import org.springframework.stereotype.Service;
 
-/**
- *
- * @author assembler
- */
-//@Service
+@Service
 public class PhoneApplicationService {
 	
 	PhoneRepository phoneRepository;
@@ -20,15 +12,19 @@ public class PhoneApplicationService {
 		this.phoneRepository = phoneRepository;
 	}
 	
-	class CreatePhoneCommand {}
-	
-	public void createPhone(CreatePhoneCommand create) {
-		//tu phone deteailes 
+	public PhoneDetails createPhone(CreatePhoneCommand createPhoneCommand) {
+		PhoneDetails phoneDetails = new PhoneDetails(
+			UUID.randomUUID().toString(),
+			createPhoneCommand.getName(),
+			createPhoneCommand.getSnippet()
+		);
+		phoneRepository.save(phoneDetails);
+		return phoneDetails;
 	}
-	
+
 	public void updatePhone() {
 	}
-	
+
 	public void deletePhone(String id) {
 	}
 }
