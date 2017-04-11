@@ -34,10 +34,12 @@ import java.util.logging.Logger;
 @RequestMapping("/phones")
 public class PhonesController {
 	private PhoneRepository phoneRepository;
+	private PhoneApplicationService phoneApplicationService;
 	
 	@Autowired
-    public PhonesController(PhoneRepository phoneRepository) {
+    public PhonesController(PhoneRepository phoneRepository, PhoneApplicationService phoneApplicationService) {
 		this.phoneRepository = phoneRepository;
+		this.phoneApplicationService = phoneApplicationService;
     }
 
 	@RequestMapping(method=RequestMethod.GET)
@@ -49,5 +51,11 @@ public class PhonesController {
 	@ResponseBody
 	public PhoneDetails getPhoneById(@PathVariable("phoneId") String phoneId, HttpServletResponse response) {
 		return phoneRepository.findById(phoneId);
+	}
+
+	@RequestMapping("/create")
+	@ResponseBody
+	public PhoneDetails createPhone(CreatePhoneCommand createPhoneCommand) {
+		return phoneApplicationService.createPhone(createPhoneCommand);
 	}
 }
