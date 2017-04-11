@@ -13,10 +13,11 @@ public class PhoneApplicationService {
 	}
 	
 	public PhoneDetails createPhone(CreatePhoneCommand createPhoneCommand) {
-		PhoneDetails phoneDetails = new PhoneDetails();
-		phoneDetails.setId(UUID.randomUUID().toString());
-		phoneDetails.setName(createPhoneCommand.getName());
-		phoneDetails.setSnippet(createPhoneCommand.getSnippet());
+		PhoneDetails phoneDetails = new PhoneDetails(
+			UUID.randomUUID().toString(),
+			createPhoneCommand.getName(),
+			createPhoneCommand.getSnippet()
+		);
 		phoneRepository.save(phoneDetails);
 		return phoneDetails;
 	}
